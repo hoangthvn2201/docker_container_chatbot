@@ -18,7 +18,7 @@ RUN pip install torch==2.0.1+cpu -f https://download.pytorch.org/whl/cpu/torch_s
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN python -c "from transformers import AutoModelForCausalLM, AutoTokenizer; AutoModelForCausalLM.from_pretrained('huyhoangt2201/llama-3.2-1b-sql_finetuned_multitableJidouka2_1.0_977_records_mix_fix_210_records_merged',device_map='auto'); AutoTokenizer.from_pretrained('huyhoangt2201/llama-3.2-1b-sql_finetuned_multitableJidouka2_1.0_977_records_mix_fix_210_records_merged')" -o /app/model
+RUN python -c "from transformers import AutoModelForCausalLM, AutoTokenizer; AutoModelForCausalLM.from_pretrained('huyhoangt2201/llama-3.2-1b-sql_finetuned_multitableJidouka2_1.0_977_records_mix_fix_210_records_merged', device_map='auto').save_pretrained('/app/model', max_shard_size='3GB'); AutoTokenizer.from_pretrained('huyhoangt2201/llama-3.2-1b-sql_finetuned_multitableJidouka2_1.0_977_records_mix_fix_210_records_merged').save_pretrained('/app/model')"
 
 ENV MODEL_PATH=/app/model
 
