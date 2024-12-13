@@ -1,0 +1,10 @@
+accelerate
+transformers
+Flask
+Flask-Cors
+Flask-SQLAlchemy
+SQLAlchemy
+pandas
+pyodbc
+
+
