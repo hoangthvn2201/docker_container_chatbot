@@ -1,0 +1,4 @@
+[wsl2]
+memory=4GB   # Set memory limit (e.g., 4GB)
+processors=2 # Set CPU limit (e.g., 2 cores)
+swap=2GB     # Set swap size (optional)
