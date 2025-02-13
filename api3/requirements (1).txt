@@ -1,9 +1,0 @@
-accelerate
-gunicorn
-transformers
-Flask
-Flask-Cors
-Flask-SQLAlchemy
-SQLAlchemy
-pandas
-pyodbc
